@@ -11,6 +11,7 @@
     align-items: center;
 }
 
+
 .item {
     float: left;
     width: 900px;
@@ -18,13 +19,13 @@
     position: relative;
 }
 
-/* .item img{
+.item img{
     display: none;
 }
 
 .item img.active {
     display: block;
-} */
+}
 
 .item img {
     width: 100%;
