@@ -57,6 +57,14 @@ const app = Vue.createApp({
             // this.activeIndex = this.activeIndex;
         }
     },
+    created() {
+        setInterval(() => {
+            this.activeIndex++;
+            if (this.activeIndex >= this.slides.length) {
+                this.activeIndex = 0;
+            }
+        }, 3000);
+    }
 });
 
 app.mount('#app');
