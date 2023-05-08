@@ -63,6 +63,7 @@ const app = Vue.createApp({
             if (this.activeIndex >= this.slides.length) {
                 this.activeIndex = 0;
             }
+            console.log(`Stampo l'indice numero: ` + this.activeIndex);
         }, 3000);
     }
 });
