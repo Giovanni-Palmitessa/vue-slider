@@ -13,11 +13,15 @@
 
     <div id="app">
 
-        <div v-for="(element, index) in slides" class="container">
+        <div v-for="(element, index) in slides" class="container" key="item">
             <div class="slider-wrapper" :tabindex="element.index">
 
-                <div class="item">
-                    <img :src="element.image" :alt="element.title" />
+                <div class="item ">
+                    <img 
+                    :src="element.image" 
+                    :alt="element.title" 
+                    :class="{active: index == activeIndex}"
+                    />
                     <div class="text">
                         <h3>{{ element.title }}</h3>
                         <p>
