@@ -12,10 +12,15 @@
 }
 
 .item {
+    display: none;
     float: left;
     width: 900px;
     height: 500px;
     position: relative;
+}
+
+.item.active {
+    display: block;
 }
 
 .item img {

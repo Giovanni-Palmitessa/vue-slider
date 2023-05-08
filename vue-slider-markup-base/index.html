@@ -13,18 +13,15 @@
 
     <div id="app">
 
-        <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+        <div v-for="(element, index) in slides" class="container">
+            <div class="slider-wrapper" :tabindex="element.index">
 
                 <div class="item">
-                    <img src="img/01.webp" alt="Spiderman" />
+                    <img :src="element.image" :alt="element.title" />
                     <div class="text">
-                        <h3>Spiderman</h3>
+                        <h3>{{ element.title }}</h3>
                         <p>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit
-                            tempore aliquid deleniti aut
-                            veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum
-                            corporis.
+                            {{ element.text }}
                         </p>
                     </div>
                 </div>
