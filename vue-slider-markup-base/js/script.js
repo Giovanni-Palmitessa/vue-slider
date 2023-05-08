@@ -57,12 +57,7 @@ const app = Vue.createApp({
             // this.activeIndex = this.activeIndex;
         },
 
-        stopAutorun() {
-            console.log('attraversato il bordo');
-            clearInterval(runId);
-        },
-
-        startAutoplay() {
+        startAutoPlay() {
             runId = setInterval(() => {
                 this.activeIndex++;
                 if (this.activeIndex >= this.slides.length) {
@@ -70,10 +65,15 @@ const app = Vue.createApp({
                 }
                 console.log(`Stampo l'indice numero: ` + this.activeIndex);
             }, 3000);
-        }
+        },
+
+        stopAutorun() {
+            console.log('attraversato il bordo');
+            clearInterval(runId);
+        },
     },
     created() {
-        this.startAutoplay();
+        this.startAutoPlay();
     }
 });
 
