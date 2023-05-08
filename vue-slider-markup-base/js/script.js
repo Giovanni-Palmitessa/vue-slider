@@ -55,16 +55,25 @@ const app = Vue.createApp({
             console.log(`Hai cliccato l'elemento in posizione: ` + index);
             this.activeIndex = index;
             // this.activeIndex = this.activeIndex;
+        },
+
+        stopAutorun() {
+            console.log('attraversato il bordo');
+            clearInterval(runId);
+        },
+
+        startAutoplay() {
+            runId = setInterval(() => {
+                this.activeIndex++;
+                if (this.activeIndex >= this.slides.length) {
+                    this.activeIndex = 0;
+                }
+                console.log(`Stampo l'indice numero: ` + this.activeIndex);
+            }, 3000);
         }
     },
     created() {
-        setInterval(() => {
-            this.activeIndex++;
-            if (this.activeIndex >= this.slides.length) {
-                this.activeIndex = 0;
-            }
-            console.log(`Stampo l'indice numero: ` + this.activeIndex);
-        }, 3000);
+        this.startAutoplay()
     }
 });
 
