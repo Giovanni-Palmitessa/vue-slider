@@ -18,13 +18,13 @@
     position: relative;
 }
 
-.item img{
+/* .item img{
     display: none;
 }
 
 .item img.active {
     display: block;
-}
+} */
 
 .item img {
     width: 100%;
