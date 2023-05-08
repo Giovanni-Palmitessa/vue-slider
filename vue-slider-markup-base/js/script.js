@@ -51,8 +51,9 @@ const app = Vue.createApp({
     }
         },
 
-        setActiveIndex() { 
-            console.log('hai cliccato');
+        setActiveIndex(index) { 
+            console.log(`Hai cliccato l'elemento in posizione: ` + index);
+            this.activeIndex = index;
             // this.activeIndex = this.activeIndex;
         }
     },
