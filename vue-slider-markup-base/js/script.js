@@ -73,7 +73,7 @@ const app = Vue.createApp({
         }
     },
     created() {
-        this.startAutoplay()
+        this.startAutoplay();
     }
 });
 
