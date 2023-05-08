@@ -49,6 +49,11 @@ const app = Vue.createApp({
     if (this.activeIndex < 0) {
         this.activeIndex = this.slides.length - 1;
     }
+        },
+
+        setActiveIndex() { 
+            console.log('hai cliccato');
+            // this.activeIndex = this.activeIndex;
         }
     },
 });
