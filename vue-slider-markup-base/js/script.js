@@ -1,3 +1,15 @@
+const app = Vue.createApp({
+    data() {
+        return {
+        }
+    },
+    methods: {
+    
+    },
+});
+
+app.mount('#app');
+
 const slides = [
 {
     image: 'img/01.webp',
