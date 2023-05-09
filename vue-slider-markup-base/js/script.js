@@ -46,10 +46,9 @@ const app = Vue.createApp({
         showPrevSlide () {
             this.activeIndex--
 
-    if (this.activeIndex < 0) {
+        if (this.activeIndex < 0) {
         this.activeIndex = this.slides.length - 1;
-    }
-        },
+        }},
 
         setActiveIndex(index) { 
             console.log(`Hai cliccato l'elemento in posizione: ` + index);
@@ -72,7 +71,7 @@ const app = Vue.createApp({
             clearInterval(runId);
         },
     },
-    created() {
+    mounted() {
         this.startAutoPlay();
     }
 });
