@@ -11,6 +11,10 @@
     align-items: center;
 }
 
+.slider-wrapper{
+    display: flex;
+}
+
 
 .item {
     display: none;
